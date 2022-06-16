@@ -14,7 +14,10 @@
 
 
 for (let index = 1; index <= 100; index++) {
-   
-    console.log(index)
+
+    // console.log(index);
+    if (!(index % 3)){
+        console.log (index + 'fizz')
+    }
 
 }
