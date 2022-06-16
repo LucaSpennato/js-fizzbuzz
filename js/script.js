@@ -42,7 +42,7 @@ containerElement.classList.add('container');
 const rowElement = document.createElement('div');
 
 // aggiungiamo classi a rowElement
-rowElement.classList.add('row', 'g-3', 'py-3');
+rowElement.classList.add('row', 'g-1', 'py-3');
 
 // aggiungiamo SOLO UNA VOLTA containerElement a main
 // ed aggiungiamo SOLO UNA VOLTA rowElement a container
@@ -50,7 +50,7 @@ mainElement.append(containerElement);
 containerElement.append(rowElement);
 
 // BONUS 2 - STO AGGIUNGENGO CLASSI DI STILE
-for (let index = 1; index <= 100; index++) {
+for (let index = 1; index < 100; index++) {
     
     // creiamo un div element nel dom, la variabile avrà il nome di divElement
     const divElement = document.createElement ('div');
@@ -59,7 +59,7 @@ for (let index = 1; index <= 100; index++) {
     divElement.append(index);
 
     // aggiungiamo ai div le classi volute
-    divElement.classList.add('col-1', 'bg-info', 'mx-5', 'text-center');
+    divElement.classList.add('col-1', 'bg-info', 'mx-1', 'text-center', 'py-5', 'border', 'border-danger');
 
     // COSA PIù IMPORTANTE ALTRIMENTI NON FUNZIA NA MAZZA:
     // mettiamo i div nel singolo row creato
