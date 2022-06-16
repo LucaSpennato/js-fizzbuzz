@@ -67,7 +67,7 @@ for (let index = 1; index < 100; index++) {
     divElement.append(index);
 
     // aggiungiamo ai div le classi volute
-    divElement.classList.add('col-1', 'mx-1', 'text-center', 'py-5', 'border', 'border-dark', 'border-2');
+    divElement.classList.add('col-1', 'mx-1', 'text-center', 'py-5', 'border', 'border-dark', 'border-2', 'shadow');
 
     // COSA PIù IMPORTANTE ALTRIMENTI NON FUNZIA NA MAZZA:
     // mettiamo i div nel singolo row creato
