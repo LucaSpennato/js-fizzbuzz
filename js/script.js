@@ -29,15 +29,34 @@
 //     console.log(index);
 // }
 
-const ulElement = document.querySelector('main ul');
+// selezioniamo il main
+const mainElement = document.querySelector('main');
+
+// aggiungiamo una row di bootstrap, chiamando la variabile rowElement
+const rowElement = document.createElement('div');
+
+// aggiungiamo a rowElement
+rowElement.classList.add('row');
+
+// aggiungiamo SOLO UNA VOLTA rowElement a main
+mainElement.append(rowElement);
 
 //  ulElement.classList.add('');
 
 for (let index = 1; index <= 100; index++) {
     
-    const liElement = document.createElement ('li');
-    liElement.append(index);
-    ulElement.append(liElement);
+    // creiamo un div element nel dom, la variabile avrà il nome di divElement
+    const divElement = document.createElement ('div');
+
+    // a questo div diamo i numeri in crescita di index per ogni div
+    divElement.append(index);
+
+    // aggiungiamo ai div le classi volute
+    divElement.classList.add('col-2');
+
+    // COSA PIù IMPORTANTE ALTRIMENTI NON FUNZIA NA MAZZA:
+    // mettiamo i div nel singolo row creato
+    rowElement.append(divElement);
 
     // IN QUESTO CASO, DICIAMO DI PRENDERE I NUMERI CHE DANNO RISULTATO 0, STRETTO STRETTO CON ===
 if ((index % 3 === 0 ) && (index % 5 === 0)) {
