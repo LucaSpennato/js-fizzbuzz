@@ -49,6 +49,14 @@ rowElement.classList.add('row', 'g-1', 'py-3');
 mainElement.append(containerElement);
 containerElement.append(rowElement);
 
+// PARTE DEL BONUS 2
+const title = document.createElement('h1'); 
+title.classList.add('col-12', 'text-center', 'display-1', 'fw-bold', 'my-5');
+title.innerHTML = 'FizzBuzzDom'
+rowElement.append(title);
+mainElement.classList.add('bg-info');
+
+
 // BONUS 2 - STO AGGIUNGENGO CLASSI DI STILE
 for (let index = 1; index < 100; index++) {
     
@@ -59,7 +67,7 @@ for (let index = 1; index < 100; index++) {
     divElement.append(index);
 
     // aggiungiamo ai div le classi volute
-    divElement.classList.add('col-1', 'mx-1', 'text-center', 'py-5', 'border', 'border-danger');
+    divElement.classList.add('col-1', 'mx-1', 'text-center', 'py-5', 'border', 'border-dark', 'border-2');
 
     // COSA PIù IMPORTANTE ALTRIMENTI NON FUNZIA NA MAZZA:
     // mettiamo i div nel singolo row creato
