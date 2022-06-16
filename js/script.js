@@ -15,9 +15,14 @@
 
 for (let index = 1; index <= 100; index++) {
 
-    // console.log(index);
-    if (!(index % 3)){
-        console.log (index + 'fizz')
-    }
+    // nei multipli comuni, vince prima chi è più in alto 
+   // console.log(index);
+if (!(index % 3)){
+    console.log(index + 'fizz')
+} else if (!(index % 5))  {
+    console.log(index + 'buzz')
+} else {
+    console.log(index);
+}
 
 }
