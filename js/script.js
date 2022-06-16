@@ -52,7 +52,7 @@ for (let index = 1; index <= 100; index++) {
     divElement.append(index);
 
     // aggiungiamo ai div le classi volute
-    divElement.classList.add('col-2');
+    divElement.classList.add('col-3');
 
     // COSA PIù IMPORTANTE ALTRIMENTI NON FUNZIA NA MAZZA:
     // mettiamo i div nel singolo row creato
@@ -60,12 +60,20 @@ for (let index = 1; index <= 100; index++) {
 
     // IN QUESTO CASO, DICIAMO DI PRENDERE I NUMERI CHE DANNO RISULTATO 0, STRETTO STRETTO CON ===
 if ((index % 3 === 0 ) && (index % 5 === 0)) {
+
+    // DATO CHE VOGLIAMO SORASCRIVERE USIAMO .innerHTML = 'QUALCOSA'
+    // LASCIANDO INTATTO E COMUNE IL divElement.append(index); FUORI
+    divElement.innerHTML = 'fizzbuzz';
     console.log('fizzbuzz');
 
 } else if (index % 5 === 0){
+
+    divElement.append = 'buzz';
     console.log('buzz')
 
 } else if (index % 3 === 0){
+
+    divElement.innerHTML = 'buzz';
     console.log('fizz')
 
 } else {
