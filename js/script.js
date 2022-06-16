@@ -32,14 +32,22 @@
 // selezioniamo il main
 const mainElement = document.querySelector('main');
 
+// aggiungiamo un container, prima gli diamo un div, chiamando la variabile containerElement
+const containerElement = document.createElement ('div');
+
+// prendiamo la variabile containerElement ed aggiungiamo la classe al div nel dom
+containerElement.classList.add('container');
+
 // aggiungiamo una row di bootstrap, chiamando la variabile rowElement
 const rowElement = document.createElement('div');
 
 // aggiungiamo a rowElement
 rowElement.classList.add('row');
 
-// aggiungiamo SOLO UNA VOLTA rowElement a main
-mainElement.append(rowElement);
+// aggiungiamo SOLO UNA VOLTA containerElement a main
+// ed aggiungiamo SOLO UNA VOLTA rowElement a container
+mainElement.append(containerElement);
+containerElement.append(rowElement);
 
 //  ulElement.classList.add('');
 
