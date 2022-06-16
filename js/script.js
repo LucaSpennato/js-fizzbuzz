@@ -41,16 +41,15 @@ containerElement.classList.add('container');
 // aggiungiamo una row di bootstrap, chiamando la variabile rowElement
 const rowElement = document.createElement('div');
 
-// aggiungiamo a rowElement
-rowElement.classList.add('row');
+// aggiungiamo classi a rowElement
+rowElement.classList.add('row', 'g-3', 'py-3');
 
 // aggiungiamo SOLO UNA VOLTA containerElement a main
 // ed aggiungiamo SOLO UNA VOLTA rowElement a container
 mainElement.append(containerElement);
 containerElement.append(rowElement);
 
-//  ulElement.classList.add('');
-
+// BONUS 2 - STO AGGIUNGENGO CLASSI DI STILE
 for (let index = 1; index <= 100; index++) {
     
     // creiamo un div element nel dom, la variabile avrà il nome di divElement
@@ -60,7 +59,7 @@ for (let index = 1; index <= 100; index++) {
     divElement.append(index);
 
     // aggiungiamo ai div le classi volute
-    divElement.classList.add('col-3');
+    divElement.classList.add('col-1', 'bg-info', 'mx-5', 'text-center');
 
     // COSA PIù IMPORTANTE ALTRIMENTI NON FUNZIA NA MAZZA:
     // mettiamo i div nel singolo row creato
