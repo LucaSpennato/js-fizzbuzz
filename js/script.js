@@ -59,7 +59,7 @@ for (let index = 1; index < 100; index++) {
     divElement.append(index);
 
     // aggiungiamo ai div le classi volute
-    divElement.classList.add('col-1', 'bg-info', 'mx-1', 'text-center', 'py-5', 'border', 'border-danger');
+    divElement.classList.add('col-1', 'bg-primary', 'mx-1', 'text-center', 'py-5', 'border', 'border-danger');
 
     // COSA PIù IMPORTANTE ALTRIMENTI NON FUNZIA NA MAZZA:
     // mettiamo i div nel singolo row creato
@@ -71,16 +71,19 @@ if ((index % 3 === 0 ) && (index % 5 === 0)) {
     // DATO CHE VOGLIAMO SORASCRIVERE USIAMO .innerHTML = 'QUALCOSA'
     // LASCIANDO INTATTO E COMUNE IL divElement.append(index); FUORI
     divElement.innerHTML = 'fizzbuzz';
+    divElement.classList.add ('bg-danger');
     console.log('fizzbuzz');
 
 } else if (index % 5 === 0){
 
     divElement.append = 'buzz';
+    divElement.classList.add ('bg-success');
     console.log('buzz')
 
 } else if (index % 3 === 0){
 
-    divElement.innerHTML = 'buzz';
+    divElement.innerHTML = 'fizz';
+    divElement.classList.add ('bg-warning');
     console.log('fizz')
 
 } else {
