@@ -12,17 +12,35 @@
 // Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 // Buon lavoro e buon divertimento! 
 
+// METODO DI RISOLUZIONE POCO ELEGANTE, IN QUESTO METODO è MENO ESPLICITO
+// QUESTO COMANDO SENZA IL NOT, PORTA A 0 I NUMERI DIVISIBILI
+// DUNQUE, HA PIù SENSO DIRE CHE INDEX DEVE ESSERE == 0, MA MEGLIO SEMPRE PIù ESPLICITI 
+// CON INDEX === 0, PER DIRGLI DI PRENDERE QUEI NUMERI CHE SON STATI ''AZZERATI'' MEGLIO DIRE 'DIVISIBILI', 
+// ANZICHè QUELLI NON(NON PRENDERE I DIVISIBILI) CAUSA STORTURA JS DOVE 0 è ANCHE FALSE
+// nei multipli comuni, vince prima chi è più in alto
+// quindi mettiamo not i % 3 &&  i % 5 in alto 
+// if ((!(index % 3)) && (!(index % 5))) {
+//     console.log(index + 'fizzbuzz');
+// } else if (!(index % 5)){
+//     console.log(index + 'buzz')
+// } else if (!(index % 3))  {
+//     console.log(index + 'fizz')
+// } else {
+//     console.log(index);
+// }
+
 
 for (let index = 1; index <= 100; index++) {
-
-// nei multipli comuni, vince prima chi è più in alto
-// quindi mettiamo not i % 3 && not i % 5 in alto 
-if ((!(index % 3)) && (!(index % 5))) {
+    
+    // IN QUESTO CASO, DICIAMO DI PRENDERE I NUMERI CHE DANNO RISULTATO 0, STRETTO STRETTO CON ===
+if ((index % 3 === 0 ) && (index % 5 === 0)) {
     console.log(index + 'fizzbuzz');
-} else if (!(index % 5)){
+} else if (index % 5 === 0){
     console.log(index + 'buzz')
-} else if (!(index % 3))  {
+} else if (index % 3 === 0)  {
     console.log(index + 'fizz')
 } else {
     console.log(index);
-}}
+}
+
+}
