@@ -29,16 +29,26 @@
 //     console.log(index);
 // }
 
+const ulElement = document.querySelector('main ul');
+
+//  ulElement.classList.add('');
 
 for (let index = 1; index <= 100; index++) {
     
+    const liElement = document.createElement ('li');
+    liElement.append(index);
+    ulElement.append(liElement);
+
     // IN QUESTO CASO, DICIAMO DI PRENDERE I NUMERI CHE DANNO RISULTATO 0, STRETTO STRETTO CON ===
 if ((index % 3 === 0 ) && (index % 5 === 0)) {
-    console.log(index + 'fizzbuzz');
+    console.log('fizzbuzz');
+
 } else if (index % 5 === 0){
-    console.log(index + 'buzz')
-} else if (index % 3 === 0)  {
-    console.log(index + 'fizz')
+    console.log('buzz')
+
+} else if (index % 3 === 0){
+    console.log('fizz')
+
 } else {
     console.log(index);
 }
